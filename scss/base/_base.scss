@@ -1,0 +1,16 @@
+// ==============================
+// BASE ELEMENT STYLES
+// ==============================
+
+* {
+  box-sizing: border-box;
+  font-family: $font-stack;
+}
+
+h2 {
+  color: $primary-color;
+}
+
+p {
+  color: $secondary-color;
+}

@@ -1,0 +1,26 @@
+// ============================
+// MIXINS
+// ============================
+
+// create flexbox mixin
+@mixin flexy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+// mixin for media queries
+@mixin media-qry($point) {
+  @if $point == 'large' {
+    @media(min-width: $large) {
+      @content;
+    }
+  }
+  @else if $point == 'med' {
+    @media(min-width: $med) {
+      @content;
+    }
+  }
+
+}
