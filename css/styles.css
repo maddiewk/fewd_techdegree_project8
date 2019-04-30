@@ -1,3 +1,12 @@
+.modal_details, .location,
+.name {
+  text-transform: capitalize;
+}
+
+.modal_img, .gall-photo {
+  border-radius: 100%;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -344,6 +353,14 @@ template {
 
 h2 {
   color: #888888;
+  font-size: 18px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 22px;
+    text-align: left;
+  }
 }
 
 p {
@@ -360,7 +377,19 @@ p {
   }
 }
 
-@media (min-width: 1024px) {
+#search {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: 15px;
+  width: 40%;
+  border-radius: 8px;
+}
+#search:focus {
+  outline: none;
+  background-color: #edeffc;
+}
+
+@media (min-width: 768px) {
   .gallery {
     display: flex;
     justify-content: space-between;
@@ -371,8 +400,8 @@ p {
 }
 
 .box {
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 170px;
   border: 2px solid #EEEEEE;
   border-radius: 10px;
   margin: 10px 0;
@@ -381,6 +410,88 @@ p {
   background-color: #C9D0F7;
   opacity: 0.8;
   cursor: pointer;
+}
+
+.gall-photo {
+  float: left;
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.name {
+  color: #9E9E9E;
+}
+
+.disabled {
+  pointer-events: none;
+  border: 1px solid black;
+}
+
+.overlay {
+  background-color: #b8b8b8;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 495px;
+  width: 400px;
+  padding: 5px 30px 5px 30px;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.modal_details {
+  text-align: center;
+  display: block;
+  font-family: "Arial", sans-serif;
+  color: #C2C2C2;
+}
+
+.modal_email {
+  text-transform: lowercase;
+}
+
+.pic_wrap {
+  text-align: center;
+}
+
+.modal_img {
+  float: none;
+}
+
+.close {
+  float: right;
+  padding: 10px;
+}
+.close:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  border-radius: 50%;
+  border: 1px solid #888888;
+}
+
+.arrow_buttons {
+  text-decoration: none;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.prev {
+  float: left;
+}
+
+.next {
+  float: right;
 }
 
 /*# sourceMappingURL=styles.css.map */

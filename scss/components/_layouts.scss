@@ -1,0 +1,76 @@
+//=================================
+// PAGE LAYOUTS
+//=================================
+
+.title {
+  @include media-qry(large) {
+    @include flexy;
+    margin: 10px;
+  }
+
+}
+
+#search {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: 15px;
+  width: 40%;
+  border-radius: 8px;
+  &:focus {
+    outline: none;
+    background-color: lighten($hover-color, 8%);
+  }
+}
+
+.gallery {
+  @include media-qry(med) {
+    @include flexy;
+    margin: 10px 20px;
+  }
+
+}
+
+.box {
+  width: 400px;
+  height: 170px;
+  border: 2px solid $border;
+  border-radius: 10px;
+  margin: 10px 0;
+  &:hover {
+    background-color: $hover-color;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+.gall-photo {
+  @extend %circle;
+  float: left;
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.name {
+  color: $secondary-color;
+}
+
+.location,
+.name {
+  @extend %capitalize;
+}
+
+.disabled {
+  pointer-events: none;
+  border: 1px solid black;
+}
+
+.overlay {
+  background-color: lighten($secondary-color, 10%);
+}

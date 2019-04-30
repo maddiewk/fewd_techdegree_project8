@@ -9,6 +9,12 @@
 
 h2 {
   color: $primary-color;
+  font-size: 18px;
+  text-align: center;
+  @include media-qry(med) {
+    font-size: 22px;
+    text-align: left;
+  }
 }
 
 p {
