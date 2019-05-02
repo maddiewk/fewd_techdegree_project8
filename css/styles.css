@@ -363,11 +363,29 @@ h2 {
   }
 }
 
-p {
-  color: #9E9E9E;
+h3 {
+  font-size: 14px;
+}
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 18px;
+  }
 }
 
+p {
+  color: #9E9E9E;
+  font-size: 12px;
+}
 @media (min-width: 1024px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+.title {
+  text-align: center;
+}
+@media (min-width: 768px) {
   .title {
     display: flex;
     justify-content: space-between;
@@ -378,38 +396,51 @@ p {
 }
 
 #search {
-  padding: 10px;
-  margin-left: auto;
-  margin-right: 15px;
-  width: 40%;
   border-radius: 8px;
+  padding: 10px;
+  width: 50%;
 }
 #search:focus {
   outline: none;
   background-color: #edeffc;
 }
+@media (min-width: 768px) {
+  #search {
+    margin-left: auto;
+    margin-right: 15px;
+    width: 40%;
+  }
+}
 
+.gallery {
+  margin: 50px 0;
+}
 @media (min-width: 768px) {
   .gallery {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 10px;
   }
 }
 
 .box {
-  width: 400px;
-  height: 170px;
   border: 2px solid #EEEEEE;
   border-radius: 10px;
-  margin: 10px 0;
+  width: 80%;
+  margin: auto;
 }
 .box:hover {
   background-color: #C9D0F7;
   opacity: 0.8;
   cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .box {
+    width: 390px;
+    height: 150px;
+    margin: 10px 0;
+  }
 }
 
 .gall-photo {
@@ -417,12 +448,15 @@ p {
   padding: 5px;
   margin-top: 20px;
   margin-left: 15px;
+  width: 75px;
+  height: 75px;
 }
 
 .info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-height: 100%;
 }
 
 .name {
@@ -431,7 +465,11 @@ p {
 
 .disabled {
   pointer-events: none;
-  border: 1px solid black;
+  border: 1px solid #9E9E9E;
+}
+
+.hide {
+  visibility: hidden;
 }
 
 .overlay {
@@ -442,8 +480,8 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 495px;
-  width: 400px;
+  height: 500px;
+  width: 480px;
   padding: 5px 30px 5px 30px;
   border-radius: 10px;
   transform: translate(-50%, -50%);
@@ -466,32 +504,25 @@ p {
 }
 
 .modal_img {
+  width: 50px;
   float: none;
 }
 
 .close {
   float: right;
-  padding: 10px;
+  padding: 5px;
 }
 .close:hover {
   cursor: pointer;
   opacity: 0.6;
-  border-radius: 50%;
   border: 1px solid #888888;
 }
 
 .arrow_buttons {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
   text-decoration: none;
-  text-align: center;
-  padding-top: 30px;
-}
-
-.prev {
-  float: left;
-}
-
-.next {
-  float: right;
 }
 
 /*# sourceMappingURL=styles.css.map */

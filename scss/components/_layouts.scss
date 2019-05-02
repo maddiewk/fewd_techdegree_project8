@@ -3,7 +3,8 @@
 //=================================
 
 .title {
-  @include media-qry(large) {
+  text-align: center;
+  @include media-qry(med) {
     @include flexy;
     margin: 10px;
   }
@@ -11,35 +12,42 @@
 }
 
 #search {
-  padding: 10px;
-  margin-left: auto;
-  margin-right: 15px;
-  width: 40%;
   border-radius: 8px;
+  padding: 10px;
+  width: 50%;
   &:focus {
     outline: none;
     background-color: lighten($hover-color, 8%);
   }
+  @include media-qry(med) {
+    margin-left: auto;
+    margin-right: 15px;
+    width: 40%;
+  }
 }
 
 .gallery {
+  margin: 50px 0;
   @include media-qry(med) {
-    @include flexy;
-    margin: 10px 20px;
+    @include grid;
+    margin: 10px;
   }
-
 }
 
 .box {
-  width: 400px;
-  height: 170px;
   border: 2px solid $border;
   border-radius: 10px;
-  margin: 10px 0;
+  width: 80%;
+  margin: auto;
   &:hover {
     background-color: $hover-color;
     opacity: 0.8;
     cursor: pointer;
+  }
+  @include media-qry(large) {
+    width: 390px;
+    height: 150px;
+    margin: 10px 0;
   }
 }
 
@@ -49,12 +57,15 @@
   padding: 5px;
   margin-top: 20px;
   margin-left: 15px;
+  width: 75px;
+  height: 75px;
 }
 
 .info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-height: 100%;
 }
 
 .name {
@@ -68,7 +79,11 @@
 
 .disabled {
   pointer-events: none;
-  border: 1px solid black;
+  border: 1px solid $secondary-color;
+}
+
+.hide {
+  visibility: hidden;
 }
 
 .overlay {

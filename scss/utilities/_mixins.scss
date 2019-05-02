@@ -10,6 +10,13 @@
   flex-wrap: wrap;
 }
 
+// create grid mixin
+@mixin grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
 // mixin for media queries
 @mixin media-qry($point) {
   @if $point == 'large' {

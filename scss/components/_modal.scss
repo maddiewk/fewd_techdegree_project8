@@ -6,8 +6,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 495px;
-  width: 400px;
+  height: 500px;
+  width: 480px;
   padding: 5px 30px 5px 30px;
   border-radius: 10px;
   transform: translate(-50%, -50%);
@@ -31,6 +31,7 @@
 }
 
 .modal_img {
+  width: 50px;
   @extend %circle;
   float: none;
 }
@@ -46,15 +47,8 @@
 }
 
 .arrow_buttons {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
   text-decoration: none;
-  text-align: center;
-  padding-top: 30px;
-}
-
-.prev {
-  float: left;
-}
-
-.next {
-  float: right;
 }

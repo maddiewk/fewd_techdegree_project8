@@ -69,7 +69,7 @@ let employeeArray = [];
 
 // use Fetch to retrieve data for 12 random employees and parse to JSON
 const getRandomEmployee = () => {
-  return fetch('https://randomuser.me/api/?results=12&inc=name,location,email,picture,cell,dob&nat=NZ,US,CA')
+  return fetch('https://randomuser.me/api/?results=12&inc=name,location,email,picture,cell,dob&nat=NZ,US')
   .then(response => response.json())
   .then(data => {return data.results;});
 };
@@ -110,7 +110,7 @@ function appendEmployee() {
     });
 
   // disable the "next" button on the last modal window
-    $('.arrow_buttons:eq(11) > .next').addClass('disabled');
+    $('.arrow_buttons:eq(11) > .next').addClass('hide');
 
   // click function for each next button on the modal window
     $('.next').on('click', function() {
@@ -120,7 +120,7 @@ function appendEmployee() {
     });
 
   // disable the "prev" button on the first modal window
-    $('.arrow_buttons:eq(0) > .prev').addClass('disabled');
+    $('.arrow_buttons:eq(0) > .prev').addClass('hide');
 
   // click function for each previous button on the modal window
     $('.prev').on('click', function() {
