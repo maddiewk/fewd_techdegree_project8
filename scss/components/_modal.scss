@@ -4,21 +4,22 @@
 
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 500px;
-  width: 480px;
-  padding: 5px 30px 5px 30px;
+  // top: 50%;
+  // left: 50%;
   border-radius: 10px;
-  transform: translate(-50%, -50%);
+  // padding: 5px 30px 5px 30px;
+  // transform: translate(-50%, -50%);
   background-color: white;
+  @include media-qry(med) {
+    height: 500px;
+    width: 480px;
+  }
 }
 
 .modal_details {
   @extend %capitalize;
   text-align: center;
   display: block;
-  font-family: "Arial", sans-serif;
   color: #C2C2C2;
 }
 
@@ -31,9 +32,12 @@
 }
 
 .modal_img {
-  width: 50px;
-  @extend %circle;
+  width: 30px;
+  @include circle;
   float: none;
+  @include media-qry(med) {
+    width: 50px;
+  }
 }
 
 .close {

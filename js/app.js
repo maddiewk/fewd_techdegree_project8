@@ -45,19 +45,19 @@ class Employee {
       <div class='pic_wrap'>
         <img class='modal_img' src='${this.picture.large}'>
       </div>
-        <div class='modal_details'>
-            <h3 class='modal_name'>${this.name.first} ${this.name.last}</h3>
-            <p class='modal_email'>${this.email}</p>
-            <p class='modal_location'>${this.location.city}</p>
-            <hr>
-            <p>${this.cell}</p>
-            <p class='modal_location'>${this.location.street} ${this.location.city}, ${this.location.state} ${this.location.postcode}</p>
-            <p class='modal_birthday'>Birthday: ${birthdayFormat(this.dob.date)}</p>
-          </div>
-          <div class='arrow_buttons'>
-            <a href='#' class='prev'>&#x21e6;</a>
-            <a href='#' class='next'>&#x21e8;</a>
-          </div>
+      <div class='modal_details'>
+          <h3 class='modal_name'>${this.name.first} ${this.name.last}</h3>
+          <p class='modal_email'>${this.email}</p>
+          <p class='modal_location'>${this.location.city}</p>
+          <hr>
+          <p>${this.cell}</p>
+          <p class='modal_location'>${this.location.street} ${this.location.city}, ${this.location.state} ${this.location.postcode}</p>
+          <p class='modal_birthday'>Birthday: ${birthdayFormat(this.dob.date)}</p>
+      </div>
+      <div class='arrow_buttons'>
+        <a href='#' class='prev'>&#x21e6;</a>
+        <a href='#' class='next'>&#x21e8;</a>
+      </div>
     </div>
   `;
   return window;

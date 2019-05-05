@@ -27,45 +27,59 @@
 }
 
 .gallery {
-  margin: 50px 0;
+  padding: 20px;
   @include media-qry(med) {
     @include grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     margin: 10px;
   }
 }
 
 .box {
+  @include grid;
   border: 2px solid $border;
   border-radius: 10px;
   width: 80%;
-  margin: auto;
+  height: 150px;
+  margin: 10px auto;
   &:hover {
     background-color: $hover-color;
     opacity: 0.8;
     cursor: pointer;
   }
   @include media-qry(large) {
-    width: 390px;
-    height: 150px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 350px;
     margin: 10px 0;
   }
 }
 
 .gall-photo {
-  @extend %circle;
-  float: left;
-  padding: 5px;
-  margin-top: 20px;
-  margin-left: 15px;
-  width: 75px;
-  height: 75px;
+  width: 45px;
+  height: 45px;
+  margin: 10px auto 0 auto;
+  border-radius: 10px;
+  @include media-qry(med) {
+    @include circle;
+    float: left;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 75px;
+    height: 75px;
+  }
 }
 
 .info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-height: 100%;
+  text-align: center;
+  margin: 0 auto;
+
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
+  // max-height: 100%;
 }
 
 .name {

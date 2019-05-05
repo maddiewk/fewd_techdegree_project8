@@ -12,22 +12,26 @@ h2 {
   font-size: 18px;
   text-align: center;
   @include media-qry(med) {
-    font-size: 22px;
+    font-size: 20px;
     text-align: left;
   }
 }
 
 h3 {
-  font-size: 14px;
+  font-size: 16px;
   @include media-qry(large) {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
 p {
   color: $secondary-color;
-  font-size: 12px;
+  font-size: 11px;
   @include media-qry(large) {
-    font-size: 16px;
+    font-size: 13px;
   }
+}
+
+hr {
+  width: 50%;
 }

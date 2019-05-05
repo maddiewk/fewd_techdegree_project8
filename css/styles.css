@@ -3,10 +3,6 @@
   text-transform: capitalize;
 }
 
-.modal_img, .gall-photo {
-  border-radius: 100%;
-}
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -358,28 +354,32 @@ h2 {
 }
 @media (min-width: 768px) {
   h2 {
-    font-size: 22px;
+    font-size: 20px;
     text-align: left;
   }
 }
 
 h3 {
-  font-size: 14px;
+  font-size: 16px;
 }
 @media (min-width: 1024px) {
   h3 {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
 p {
   color: #9E9E9E;
-  font-size: 12px;
+  font-size: 11px;
 }
 @media (min-width: 1024px) {
   p {
-    font-size: 16px;
+    font-size: 13px;
   }
+}
+
+hr {
+  width: 50%;
 }
 
 .title {
@@ -413,7 +413,7 @@ p {
 }
 
 .gallery {
-  margin: 50px 0;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   .gallery {
@@ -425,10 +425,12 @@ p {
 }
 
 .box {
+  display: grid;
   border: 2px solid #EEEEEE;
   border-radius: 10px;
   width: 80%;
-  margin: auto;
+  height: 150px;
+  margin: 10px auto;
 }
 .box:hover {
   background-color: #C9D0F7;
@@ -437,26 +439,34 @@ p {
 }
 @media (min-width: 1024px) {
   .box {
-    width: 390px;
-    height: 150px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 350px;
     margin: 10px 0;
   }
 }
 
 .gall-photo {
-  float: left;
-  padding: 5px;
-  margin-top: 20px;
-  margin-left: 15px;
-  width: 75px;
-  height: 75px;
+  width: 45px;
+  height: 45px;
+  margin: 10px auto 0 auto;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .gall-photo {
+    border-radius: 50%;
+    float: left;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 75px;
+    height: 75px;
+  }
 }
 
 .info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-height: 100%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .name {
@@ -505,6 +515,7 @@ p {
 
 .modal_img {
   width: 50px;
+  border-radius: 50%;
   float: none;
 }
 
