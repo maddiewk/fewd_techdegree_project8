@@ -26,12 +26,17 @@ h3 {
 
 p {
   color: $secondary-color;
-  font-size: 11px;
+  font-size: 13px;
   @include media-qry(large) {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 
 hr {
-  width: 50%;
+  @include media-qry(med) {
+    width: 50%;
+  }
+  @include media-qry(large) {
+    width: 75%;
+  }
 }

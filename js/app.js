@@ -1,8 +1,6 @@
 // set up variables
 const $gallery = $('.gallery');
 const $userInput = $('#search');
-const $closeBtn = $('.close');
-const $emplModal = $('.modal');
 
 // class constructor to create random employee
 class Employee {
@@ -55,8 +53,8 @@ class Employee {
           <p class='modal_birthday'>Birthday: ${birthdayFormat(this.dob.date)}</p>
       </div>
       <div class='arrow_buttons'>
-        <a href='#' class='prev'>&#x21e6;</a>
-        <a href='#' class='next'>&#x21e8;</a>
+        <a href='#' class='prev'>&#x3c;</a>
+        <a href='#' class='next'>&#x3e;</a>
       </div>
     </div>
   `;
