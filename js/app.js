@@ -4,7 +4,6 @@ const $userInput = $('#search');
 
 // class constructor to create random employee
 class Employee {
-
   constructor (name, location, email, picture, cell, dob) {
     this.name = name;
     this.location = location;
@@ -30,14 +29,12 @@ class Employee {
 
 //create modal window for each employee
  createModalWindow(profile) {
+   const bday = new Date(this.dob.date);
+   const month = bday.getMonth();
+   const day = bday.getDate();
+   const year = bday.getFullYear();
 
-  const birthdayFormat = (bday) => {
-    // get date
-    let emplBday = bday.slice(0,10).split("-");
-    return `${emplBday[1]}/${emplBday[2]}/${emplBday[0].slice(0,4)}`; // 4-digit year
-  };
-
-  let window = `
+  return `
     <div class='modal'>
     <span class='close'>X</span>
       <div class='pic_wrap'>
@@ -50,7 +47,7 @@ class Employee {
           <hr>
           <p>${this.cell}</p>
           <p class='modal_location'>${this.location.street} ${this.location.city}, ${this.location.state} ${this.location.postcode}</p>
-          <p class='modal_birthday'>Birthday: ${birthdayFormat(this.dob.date)}</p>
+          <p class='modal_birthday'>Birthday: ${month}/${day}/${year}</p>
       </div>
       <div class='arrow_buttons'>
         <a href='#' class='prev'>&#x3c;</a>
@@ -58,7 +55,6 @@ class Employee {
       </div>
     </div>
   `;
-  return window;
   }
 }
 
@@ -91,7 +87,7 @@ function appendEmployee() {
         $('.modal').hide();
       });
 
-  //click function to bring up modal window
+  // function to bring up modal window
     $('.box').on('click', function() {
       $(this).next().show();
       $('.box').addClass('disabled');
@@ -99,7 +95,7 @@ function appendEmployee() {
       $('#search').hide();
     });
 
-  // click function to close modal window
+  // function to close modal window
     $('.close').on('click', function() {
       $(this).parent().hide();
       $('.box').removeClass('disabled');
@@ -110,7 +106,7 @@ function appendEmployee() {
   // disable the "next" button on the last modal window
     $('.arrow_buttons:eq(11) > .next').addClass('hide');
 
-  // click function for each next button on the modal window
+  // function for each next button on the modal window
     $('.next').on('click', function() {
       let parent = $(this).parent().parent(); // gets the modal window div currently displaying
         parent.hide();
@@ -120,7 +116,7 @@ function appendEmployee() {
   // disable the "prev" button on the first modal window
     $('.arrow_buttons:eq(0) > .prev').addClass('hide');
 
-  // click function for each previous button on the modal window
+  // function for each previous button on the modal window
     $('.prev').on('click', function() {
       let parent = $(this).parent().parent();
         parent.hide();
